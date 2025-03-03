@@ -1,0 +1,240 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: #1e2130;
+    color: #e0e0e0;
+}
+
+/* Toolbar */
+header.toolbar {
+    display: flex;
+    padding: 0;
+    background-color: #1e2130;
+    border-bottom: 1px solid #2a2e3b;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 0 15px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-bottom: 2px solid #00b8d4;
+}
+
+.format-buttons {
+    display: flex;
+    height: 100%;
+}
+
+.format-buttons button {
+    background: none;
+    border: none;
+    color: #00b8d4;
+    padding: 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 100%;
+    transition: background 0.2s;
+    font-weight: 500;
+}
+
+.format-buttons button:hover {
+    background-color: #2a2e3b;
+}
+
+.action-buttons {
+    padding-right: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #00b8d4;
+    padding: 6px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+
+#open-btn {
+    border: 1px solid #2a2e3b;
+}
+
+#save-btn {
+    background-color: #00b8d4;
+    color: #1e2130;
+}
+
+/* Editor */
+.editor-container {
+    display: flex;
+    height: calc(100% - 80px);
+}
+
+#pad, #markdown {
+    flex: 1;
+    padding: 20px;
+    font-size: 16px;
+    overflow-y: auto;
+    line-height: 1.6;
+}
+
+#pad {
+    background-color: #1e2130;
+    border: none;
+    resize: none;
+    outline: none;
+    color: #e0e0e0;
+    font-family: 'Fira Code', monospace;
+}
+
+#markdown {
+    background-color: #1e2130;
+    border-left: 1px solid #2a2e3b;
+}
+
+.divider {
+    width: 2px;
+    background: #00b8d4;
+    opacity: 0.5;
+}
+
+/* Status bar */
+.status-bar {
+    height: 30px;
+    background-color: #1e2130;
+    border-top: 1px solid #2a2e3b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #8a8f98;
+}
+
+.center-status {
+    display: flex;
+    align-items: center;
+}
+
+.center-status button {
+    background: none;
+    border: none;
+    color: #00b8d4;
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 16px;
+}
+
+.right-status {
+    display: flex;
+    gap: 15px;
+}
+
+/* Markdown styles */
+#markdown h1, #markdown h2, #markdown h3 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+
+#markdown h1 {
+    font-size: 1.8em;
+    border-bottom: 1px solid #2a2e3b;
+    padding-bottom: 0.3em;
+}
+
+#markdown h2 {
+    font-size: 1.5em;
+}
+
+#markdown h3 {
+    font-size: 1.3em;
+}
+
+#markdown p {
+    margin-bottom: 1em;
+}
+
+#markdown ul, #markdown ol {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+#markdown blockquote {
+    border-left: 3px solid #00b8d4;
+    padding-left: 1em;
+    margin-left: 0;
+    color: #a0a0a0;
+}
+
+#markdown code {
+    background-color: #2a2e3b;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+
+#markdown pre {
+    background-color: #2a2e3b;
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 1em;
+}
+
+#markdown pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+#markdown a {
+    color: #00b8d4;
+    text-decoration: none;
+}
+
+#markdown a:hover {
+    text-decoration: underline;
+}
+
+#markdown img {
+    max-width: 100%;
+}
+
+#markdown hr {
+    border: none;
+    height: 1px;
+    background-color: #2a2e3b;
+    margin: 2em 0;
+}
+
+#markdown table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#markdown th, #markdown td {
+    border: 1px solid #2a2e3b;
+    padding: 0.5em;
+}
+
+#markdown th {
+    background-color: #2a2e3b;
+}

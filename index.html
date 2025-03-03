@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="toolbar">
+        <div class="logo">
+            <span>Markdown</span>
+        </div>
+        <div class="format-buttons">
+            <button onclick="applyMarkdown('**', '**')" title="Bold"><span>B</span></button>
+            <button onclick="applyMarkdown('*', '*')" title="Italic"><span>I</span></button>
+            <button onclick="applyMarkdown('~~', '~~')" title="Strikethrough"><span>S</span></button>
+            <button onclick="applyMarkdown('# ')" title="Heading 1"><span>H1</span></button>
+            <button onclick="applyMarkdown('## ')" title="Heading 2"><span>H2</span></button>
+            <button onclick="applyMarkdown('### ')" title="Heading 3"><span>H3</span></button>
+            <button onclick="applyMarkdown('- ')" title="Bullet List"><span>•</span></button>
+            <button onclick="applyMarkdown('1. ')" title="Numbered List"><span>1.</span></button>
+            <button onclick="applyMarkdown('- [ ] ')" title="Task List"><span>✓</span></button>
+            <button onclick="applyMarkdown('> ')" title="Quote"><span>"</span></button>
+            <button onclick="applyMarkdown('`', '`')" title="Inline Code"><span>I<></span></button>
+            <button onclick="applyMarkdown('```\n', '\n```')" title="Code Block"><span><>B</span></button>
+            <button onclick="applyMarkdown('[', '](url)')" title="Link"><span>A</span></button>
+            <button onclick="applyMarkdown('![alt text](', ')')" title="Image"><span>I</span></button>
+            <button onclick="applyMarkdown('---\n')" title="Horizontal Rule"><span>—</span></button>
+            <button onclick="applyMarkdown('| Header | Header |\n| ------ | ------ |\n| Cell   | Cell   |\n')" title="Table"><span>≡</span></button>
+        </div>
+        <div class="action-buttons">
+            <button class="action-btn" id="open-btn">Open</button>
+            <button class="action-btn" id="save-btn">Save</button>
+        </div>
+    </header>
+    <main class="editor-container">
+        <textarea id="pad" placeholder="Write markdown here..."></textarea>
+        <div class="divider"></div>
+        <div id="markdown"></div>
+    </main>
+    <footer class="status-bar">
+        <div class="left-status">
+            <span id="line-col">Line 1  Col 0</span>
+        </div>
+        <div class="center-status">
+            <button id="prev"><span>←</span></button>
+            <button id="center-dot"><span>•</span></button>
+            <button id="next"><span>→</span></button>
+        </div>
+        <div class="right-status">
+            <span id="char-count">0 chars</span>
+            <span id="word-count">0 words</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
