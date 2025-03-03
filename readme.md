@@ -2,7 +2,7 @@
 
 A sleek, modern in-browser markdown editor with real-time preview. This lightweight application allows you to create, edit, and export markdown documents with an intuitive interface and comprehensive formatting tools.
 
-![Markdown Editor Screenshot](https://via.placeholder.com/800x450)
+![Markdown Editor Screenshot](./image.png)
 
 ## Features
 
